@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+     <link rel="icon" href="../images/logos/blackbg-yellow bus.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../styles/reserve.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Choose places</title>
+    <script>
+      function myFunction(){
+    let clearId;
+    clearTimeout(clearId);
+    clearId= setTimeout(()=>{document.getElementById('js-loader').style.display = 'none';
+          document.querySelectorAll('.hidden').forEach((el) => {
+          el.classList.remove('hidden');
+       });
+        
+    },1000);
+}
+    </script>
+  </head>
+  <body onload="myFunction();">
+  
+
+  <header id="siteheader" class="hidden">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+       <h3>THREE - MONTH'S SEAT BOOKING</h1>
+        <!-- <a class="navbar-brand" href="#"><i class="fa "></i>DOPAS</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="https://mail.google.com/mail/u/0/#inbox"><i class="fa " aria-hidden="true"></i>MAIL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../projectfiles/driver.html"><i class="fa fa-ticket" aria-hidden="true"></i>CONTACT US</a>
+            </li>
+            
+           <li class="nav-item">
+              <a class="nav-link" href="#">ENG<i  aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
+<div id ="js-loader">
+		<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+		<dotlottie-player src="https://lottie.host/5b3906b7-1125-491b-b15c-627c7919e2f4/pdDyduqYzL.lottie" 
+			background="transparent" 
+			speed="2" style="width: 300px; height: 300px" 
+			loop autoplay>
+		</dotlottie-player>
+  </div>
+
+
+      <section class="breadcrumb_sec hidden">
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12">
+                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                  <!-- <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Search result</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Choose place</li>
+                    <li class="breadcrumb-item"><a href="#">Passenger information</a></li>
+                    <li class="breadcrumb-item"><a href="#">payment</a></li>
+                  </ol> -->
+                </nav>
+             </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    <section class="chosse_place hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <!-- <h1>THREE - MONTH'S SEAT BOOKING</h1> -->
+            <div id="booking" class="section">
+              <div class="section-center">
+                <div class="booking-form">
+                  <form style="margin-top: 60px;">
+
+                     <div class="mb-3 form-group from_dis">
+                      <label for="exampleInputEmail1" class="form-label">From</label>
+                      <input list="from" type="text" class="form-control"  placeholder="">
+
+                      <datalist id="from">
+                        <option value="ysr circle"></option>
+                        <option value="City Circle"></option>
+                        <option value="Lakeside"></option>
+                        <option value="Cross Town"></option>
+                        <option value="Harbor line"></option>
+                        <option value="City"></option>
+                           
+                      </datalist>
+                    </div>
+
+                    <div class="mb-3 form-group to_dis">
+                      <label for="exampleInputEmail1" class="form-label">To</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="VVIT clg">
+                    </div>
+
+                    <div class="form-group mb-3 date_dis">
+                     
+                      <!-- <input class="form-control form-control-date"  placeholder="Today Date">  -->
+                      <span class="form-label form-label-date">Date</span>
+                    </div>
+
+                    <div class="form-btn mb-3 form-group">
+                      <button class="reserve-btn" type="button"></button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<section id="place_and_sttoped hidden">
+  <div class="container">
+    <div class="row place_row">
+      <div class="col-md-3">
+        <div class="booking_time_date">
+          <h4 class="time_travel">08:00 AM <br> <span> JANUARY 4</span></h4>
+          <!-- <p class="stopes_area">YSR circle, Bus station "Central...</p> -->
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="on_road_time">
+          <p>2h 2min on  road</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="booking_time_date">
+          <h4 class="time_travel time_travel1">14:00 PM <br><span>MARCH 4</span></h4>
+          <!-- <p class="stopes_area">VVIT ...</p> -->
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="booking_time_date">
+          <!-- <h4 class="time_travel">110,00 <span style="font-size: larger;">$</span></h4>
+          <p class="stopes_area">Free 15 seats</p> -->
+        </div>
+      </div>
+      <div class="col-md-2" style="margin:60px 0px 50px 1px">
+        <a class="choose_btn" href="#total">Calculate</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"  style="margin-top: 10px;">
+        <div class="booking_time_date">         
+          <!-- <p  class="stopes_area">Route : YSR circle - VVIT clg </p> -->
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="on_road_time"> </div>
+      </div>
+      <div class="col-md-3"  style="margin-top: 10px;">
+        <div class="booking_time_date">
+          <!-- <p class="stopes_area">ID : 23BQ1A05A9</p> -->
+        </div>
+      </div>
+      <div class="col-md-2"  style="margin-top: 10px;">
+        <div class="booking_time_date">
+          <!-- <p class="stopes_area">Bus:Mersedes Benz</p> -->
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+  <section id="seat_number hidden"  style="margin-top: 30px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="seat_space">
+
+            <li   class="seat_num"><a href="#"><strong>D</strong></a></li>
+            <li style="background-color: #529ef2;" class="seat_num"><a href="#">1</a></li>
+            <li class="seat_num"><a href="#">2</a></li>
+            <li class="seat_num"><a href="#">3</a></li>
+            <li  class="seat_num"><a href="#">4</a></li>
+            <li class="seat_num"><a href="#">5</a></li>
+            <li class="seat_num"><a href="#">6</a></li>
+            <li class="seat_num"><a href="#">7</a></li>
+            <li  class="seat_num"><a href="#">8</a></li>
+            <li class="seat_num"><a href="#">9</a></li>
+            <li style="background-color: #e3e3e3;" class="seat_num"><a href="#">10</a></li>
+          </ul>
+
+          <ul >
+               <!-- <li style="border: none;" class="seat_num"></li> -->
+                  >>
+                <li class="seat_num"><a href="#">12</a></li>
+                <li class="seat_num"><a href="#">13</a></li>
+                <li class="seat_num"><a href="#">14</a></li>
+                <li class="seat_num"><a href="#">15</a></li>
+                <li style="background-color: #529ef2;" class="seat_num"><a href="#">16</a></li>
+                <li class="seat_num"><a href="#">17</a></li>
+                <li class="seat_num"><a href="#">18</a></li>
+                <li style="background-color: #529ef2;" class="seat_num"><a href="#">19</a></li>
+                <li class="seat_num"><a href="#">20</a></li>
+                <li class="seat_num"><a href="#">21</a></li>
+                <br><br>
+
+          </ul>
+
+          
+      
+
+          <ul>>>
+            
+            <li class="seat_num"><a href="#">22</a></li>
+            <li style="background-color: #e3e3e3;" class="seat_num"><a href="#">23</a></li>
+            <li class="seat_num"><a href="#">24</a></li>
+            <li  class="seat_num"><a href="#">25</a></li>
+            <li class="seat_num"><a href="#">26</a></li>
+            <li class="seat_num"><a href="#">27</a></li>
+            <li style="background-color: #529ef2;" class="seat_num"><a href="#">28</a></li>
+            <li class="seat_num"><a href="#">29</a></li>
+            <li class="seat_num"><a href="#">30</a></li>
+             <li class="seat_num"><a href="#">31</a></li>
+            <!-- <li class="seat_num"><a href="#">31</a></li> -->
+          </ul>
+
+          <ul class="seat_space"  style="margin-bottom: 50px;">
+            <li style="border: none;" class="seat_num"><a href="#"> ENTRY</a></li>
+            <li class="seat_num"><a href="#">32</a></li>
+            <li class="seat_num"><a href="#">33</a></li>
+            <li style="background-color: #529ef2;" class="seat_num"><a href="#">34</a></li>
+            <li class="seat_num"><a href="#">35</a></li>
+            <li class="seat_num"><a href="#">36</a></li>
+            <li class="seat_num"><a href="#">37</a></li>
+            <li class="seat_num"><a href="#">38</a></li>
+            <li class="seat_num"><a href="#">39</a></li>
+            <li class="seat_num"><a href="#">40</a></li>
+            <li  class="seat_num"><a href="#">41</a></li>
+            
+          </ul>
+
+          <ul class="seat_space">
+            
+          </ul>
+
+
+          
+          <ul class="seat_space_select">
+            <br>
+            <!-- <li class="seat_num_select"><a href="#">Seat 10</a></li>
+            <li class="seat_num_select"><a href="#">Seat 23</a></li> -->
+            <li><p>Click to select seat and single-click Calculate btn</p></li>
+          </ul>
+
+          
+
+        </div>
+        <div class="col-md-6" id="total">
+          <div class="type_place">
+              <ul class="showcase">
+                <li>
+                  <div class="seat free_place"></div>
+                  
+                  <small>Free place</small>
+                </li>
+                <li>
+                  <div class="seat occupied"></div>
+                  <small>Holded place</small>
+                </li>
+                <li>
+                  <div class="seat selected"></div>
+                  <small>Choosed place</small>
+                </li>    
+              </ul>
+          </div>
+
+          <div class="total_amount">
+            <!-- <h class="total_title">Total</p> -->
+            <p class="total_payment"> total: 0.0 <span>$</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+                                                     
+
+
+ 
+  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="../scripts/reserve.js"></script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box;
+
+}
+
+html::selection{
+    background: greenyellow;
+    color:darkviolet;
+}
+
+#js-loader{
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  /* border: 16px solid #f8f8f8; */
+  /* border-radius: 50%; */
+  /* border-top: 16px solid #3498db; */
+  /* border-bottom: 16px solid #3498db; */
+  /* border-left: 16px solid #3498db; */
+
+  /* -webkit-animation: spin 2s linear infinite; */
+   /* animation: spin 2s linear infinite;  */
+}
+
+/* @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+} */
+
+/* @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  */
+
+.login-btn-anchor{
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer{
+  
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  align-items: center;
+  justify-content: center;
+
+  
+  /* position:absolute; */
+  /* bottom: 0; */
+  
+
+}
+.footer-section{
+  background-color: black;
+}
+
+body {
+  background: #F7F7F7;
+  padding-top: 30px;
+}
+
+.logo-container {
+  height: 100%;
+  width: 150px;
+  background: #44A8F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 35px;
+  width: 65px;
+}
+
+.navButton-container {
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+  height: 100%;
+  width: 150px;
+  background: #44A8F3;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing:3px;
+  font-weight: 500;
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  background: white;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.nav-links a:first-child {
+  margin-left: 0px;
+}
+.nav-links a:last-child {
+  margin-right: 0px;
+}
+.nav-links li.active {
+  color: #44A8F3;
+}
+.nav-links li.active:after {
+  content: "";
+  background: #44A8F3;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+}
+.nav-links li {
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  /* color: #586369; */
+  color: black;
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  flex: 1;
+}
+.nav-links li:hover {
+  color: #44A8F3;
+}
+.nav-links li:hover:after {
+  content: "";
+
+  background: #44A8F3;
+  /* :hover:after ki apply cheyali background: color; to get btn downside line    */
+
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+}
+
+.banner {
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+}
+.banner .banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+  position: relative;
+}
+.banner .banner-content .banner-text {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 40%;
+  font-size: 9rem;
+  font-weight: 700;
+  color: #EDEDED;
+  z-index: -1;
+  text-transform: uppercase;
+  letter-spacing: 25px;
+  white-space: nowrap;
+}
+.banner .banner-content img {
+  /* max-width: 800px; */
+  width: 100%;
+  height: 6000px;
+  z-index: 2;
+}
+
+button {
+  background: #44A8F3;
+  color: white;
+  border: none;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  padding: 1.25rem 3rem;
+  text-transform: uppercase;
+  display: flex;
+  align-self: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  /* -webkit-transition: background 300ms; */
+  /* transition: background 300ms; */
+  position: relative;
+}
+button:hover {
+  background: #0d76c4;
+  cursor: pointer;
+}
+
+.feature {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.feature:nth-child(2n+1) {
+  flex-flow: row-reverse;
+}
+
+.feature-content {
+  flex: 1;
+  margin-top: 250px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.feature-img {
+  width: 50%;
+  height: 500px;
+  background: url("http://blog.lumoid.com/wp-content/uploads/using-his-dji-phantom-4-drone-allows-scanu-to-take-unique-shots-wherever-he-goes-like-this-one-of-bronte-beach-in-sydney.jpg") no-repeat center center;
+}
+
+.feature-img2 {
+  width: 50%;
+  height: 500px;
+  /* background: url("https://static1.squarespace.com/static/58ed7bf3ff7c5082bcf3449d/t/590a7aca3a04112426fee531/1493859032413/dallas-aerial-drone-photography-tx-4000.JPG?format=1500w") no-repeat top right; */
+  /* background-size: cover; */
+}
+
+.feature-img3 {
+  width: 50%;
+  height: 500px;
+  /* background: url("http://www.aerialhotshots.com.au/wp-content/uploads/2015/02/Aerial-Photography-Section-Background-Large.jpg") no-repeat top right;
+  background-size: cover; */
+}
+
+.feature-img4 {
+  width: 50%;
+  height: 500px;
+  /* background: url("http://blog.lumoid.com/wp-content/uploads/using-his-dji-phantom-4-drone-allows-scanu-to-take-unique-shots-wherever-he-goes-like-this-one-of-bronte-beach-in-sydney.jpg") no-repeat top right;
+  background-size: cover; */
+}
+
+.feature-content {
+  
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px;
+  
+}
+.feature-content h2 {
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00487C;
+  margin-bottom: 10px;
+}
+.feature-content p {
+ 
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #2A324B;
+  margin: 0;
+}
+
+.btn--shockwave.is-active {
+  margin-top:20px;
+  animation: shockwaveJump 2s ease-out infinite;
+  cursor: pointer;
+}
+.btn--shockwave.is-active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: shockwave 2s 1.15s ease-out infinite;
+}
+.btn--shockwave.is-active:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: shockwave 2s 1s ease-out infinite;
+}
+
+@keyframes shockwaveJump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.08);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  55% {
+    transform: scale(1.02);
+  }
+  60% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+  95% {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0), inset 0 0 30px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(2.25);
+  }
+}

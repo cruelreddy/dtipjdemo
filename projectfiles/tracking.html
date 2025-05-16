@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bus Tracker UI with Live Location</title>
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="../styles/tracking.css">
+
+   <script>
+      function myFunction(){
+        let clearId;
+        clearTimeout(clearId);
+        clearId= setTimeout(()=>{
+          document.getElementById('js-loader').style.display = 'none';
+              document.querySelectorAll('.hidden').forEach((el) => {
+              el.classList.remove('hidden');
+          });
+            
+        },1000);
+}
+    </script>
+</head>
+
+
+<body onload="myFunction();">
+   <div id ="js-loader">
+		<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+		<dotlottie-player src="https://lottie.host/5b3906b7-1125-491b-b15c-627c7919e2f4/pdDyduqYzL.lottie" 
+			background="transparent" 
+			speed="2" style="width: 300px; height: 300px" 
+			loop autoplay>
+		</dotlottie-player>
+  </div>
+  <div class="container" style="margin-top: 140px;">
+
+
+<!-- Left (Dark Dashboard) -->
+    <div class="card dark">
+      <div class="header">
+        <!-- <p class="morning">Morning</p> -->
+        <h2>REDDY</h2>
+      </div>
+
+      <div class="cards-row">
+        <div class="mini-card">
+          <p>Welcome to<br>Bus Tracker</p>
+        </div>
+        <div class="mini-card cctv">
+          <a href="./driver.html" style="color: aliceblue; text-decoration: none;">  GO TO BUS INFO </a>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <p class="title">Track  Bus</p>
+        <p class="plate">Bus No. <strong>990032J</strong></p>
+      </div>
+
+      <div class="drop-card">
+        <p class="title">Bus Drop-off</p>
+        <p>13 Total Drop-offs <br><span class="small">2 Remaining</span></p>
+      </div>
+
+      <div class="nav-bar light">
+        <a href="../index.html">
+            <button>
+                <span class="active">Home</span>
+            </button>
+            
+            
+        </a>
+        <!-- <span>Track</span> -->
+        <!-- <span>CCTV</span> -->
+        <!-- <span>Profile</span> -->
+      </div>
+    </div>
+
+    <!-- Right (Map View) -->
+    <div class="card light">
+      <div class="top-bar">
+        <p class="bus">Bus No. 990032J</p>
+        <div class="icons">
+          <span title="961625244" >📞</span>
+          <span title="Settings">⚙️</span>
+        </div>
+      </div>
+
+      <!-- Actual Map -->
+      <div id="map">Loading map...</div>
+
+      <div class="timer-card" id="timer">
+        
+      </div>
+
+      <!-- <div class="stats">
+        <div><strong>12</strong><br>Drops</div>
+        <div><strong>28:25</strong><br>Total Time</div>
+        <div><strong>09 KM</strong><br>Distance</div>
+      </div>
+
+      <div class="nav-bar dark">
+        <span>Home</span>
+        <span class="active">Track</span>
+        <span>CCTV</span>
+        <span>Profile</span>
+      </div> -->
+    </div>
+
+  </div>
+
+  <!-- Leaflet JS -->
+    <!--an open source for ineractive maps like dayjs -->
+    
+    <script type="module" src="../scripts/tracking.js"></script>
+  <script
+       
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin="">
+  </script>
+  
+</body>
+</html>

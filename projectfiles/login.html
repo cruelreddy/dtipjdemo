@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Login Page</title>
+  <link rel="icon" href="../images/logos/blackbg-yellow bus.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="../styles/login.css">
+
+<!-- <script  type="module" src="../scripts/login.js"></script> -->
+</head>
+<body>
+	
+
+
+<!-- partial:index.partial.html -->
+<div id="particles-js"></div>
+<div id ="js-loader">
+		<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+		<dotlottie-player src="https://lottie.host/5b3906b7-1125-491b-b15c-627c7919e2f4/pdDyduqYzL.lottie" 
+			background="transparent" 
+			speed="2" style="width: 300px; height: 300px" 
+			loop autoplay>
+		</dotlottie-player>
+  </div>
+
+<body class="login" onload="myFunction();">
+	
+	<div class="container hidden ">
+		<div class="login-container-wrapper clearfix">
+			<div class="logo">
+				<i class="fa fa-sign-in"></i>
+			</div>
+
+			<div class="welcome"><strong>Welcome,</strong> please login</div>
+
+			<form class="form-horizontal login-form">
+
+				<div class="form-group relative">
+					<input id="login_username" class="form-control input-lg" type="email" placeholder="Username" required>
+					<i class="fa fa-user"></i>
+				</div>
+
+				<div class="form-group relative password">
+					<input id="login_password" class="form-control input-lg" type="password" placeholder="Password" required>
+					<i class="fa fa-lock"></i>
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-success btn-lg btn-block"> 
+						<a href="./driver.html">Login</a>
+					</button>
+				</div>
+
+				<div class="checkbox pull-left">
+					<label> <input id="show"  type="checkbox" onclick="login_password.type = this.checked ? 'text':'password' "> Show password</label>
+				</div>
+
+				<div class="checkbox pull-right">
+					<label> <a class="forget"  title="forget">Forgot your password</a> </label>
+				</div>
+
+			</form>
+		</div>
+    
+    <h4 class="text-center"></h4>
+	</div>
+
+  </body>
+<!-- partial -->
+ <script  type="module" src="../scripts/login.js"></script>
+  <script  src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script  src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+<!-- <script  type="module" src="../scripts/login.js"></script> -->
+
+</body>
+</html>

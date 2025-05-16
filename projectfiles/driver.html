@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>driver info</title>
+  <link rel="icon" href="../images/logos/blackbg-yellow bus.png">
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css'><link rel="stylesheet" href="../styles/driver.css">
+
+</head>
+<body>
+
+  <div id ="js-loader">
+		<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+		<dotlottie-player src="https://lottie.host/5b3906b7-1125-491b-b15c-627c7919e2f4/pdDyduqYzL.lottie" 
+			background="transparent" 
+			speed="2" style="width: 300px; height: 300px" 
+			loop autoplay>
+		</dotlottie-player>
+  </div>
+
+<!-- partial:index.partial.html -->
+<div class='app hidden'>
+  <div class='header'>
+    <div class='row'>
+      <div class='col'>
+        <div class='icon'>
+          <div class='logo' id='tour-logo'>
+            <i class='fas fa-bus'></i>
+             BUS INF
+          </div>
+        </div>
+      </div>
+      <div class='col'>
+        <div class='controls'>
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASKV5Mgx-oLlk7agBNowe4lF7JjCFZNU9F4WldIfNN3cepVCLhJwi0dYQ6uSAjE3z7yc48DN5ysE6w&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S456957596%3A1747286196559177">
+
+              <button class='icon'>
+                <i class='fas fa-envelope' ></i>
+              </button>
+
+            </a>
+
+          <button class='icon'>
+            <i class='fas fa-bell'></i>
+          </button>
+          <button class='user-profile' id='tour-user'>
+             <span style="color:darkviolet"><strong> REDDY</strong> </span> 
+            <img src='../images/backgrounds/bus bg.jpg' alt="scrambled picc" height="10px" width="20px">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='body'>
+    <div class='sidebar'>
+      <ul class='sidebar-nav'>
+        <li>
+          <button>
+            <span >Dashboard</span>
+            <i class='fas fa-home'></i>
+          </button>
+        </li>
+        <li>
+          <button id='tour-elements'>
+            <span>Nearby</span>
+            <i  class='fas fa-basketball-ball'></i>
+          </button>
+        </li>
+        <li>
+          <a href="./tracking.html" style="text-decoration: none;">
+            <button>
+              <span>Tracking</span>
+              <i class='fas fa-bus'></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a style="text-decoration: none;" href="./reserve.html">
+            <button>
+              <span>Reserve Seat</span>
+              <i class='fas fa-pen'></i>
+            </button>
+          </a>
+        </li>
+        <li>
+         
+          <a href="#js-section-feedback" class="js-feedback-anchor">
+              <button>
+                <span >FeedBack</span>
+                 <!-- <i class='fas fa-cloud'></i> -->
+                <i class='fas fa-book' style="right: 0px;"></i>
+              </button>
+          </a>
+          
+        </li>
+        <li class='cta'>
+          <button class='primary' id='tour-action'>
+           <a class="contactus" href="#js-section-footer"> CONTACT US</a>
+          </button>
+        </li>
+        <li class='cta'>
+          <button class='primary contactus' id='start-tour'>
+              DEMO 
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class='main'>
+      
+      <div class='main__content hidden'>
+        <h1 class='h1 title'>
+          <i  class='fas fa-home'></i>
+          <span style="color:  black">Dashboard</span>
+        </h1>
+        <div class='dashcards'>
+          <div class='col'>
+            <div class='card'>
+              <!-- <i  class='fas fa-home'></i> -->
+              <!-- <h5 class='card__subtitle'>Subtitle</h5> -->
+              <!-- <h2 class='card__title'>Title</h2> -->
+              <p class='card__extra'><span style="color: black;">ID </span>: A unique identifier for the driver, used to manage and reference them in the system</p>
+            </div>
+          </div>
+          <div class='col'>
+            <div class='card'>
+              <!-- <i class='fas fa-home'></i> -->
+              <!-- <h5 class='card__subtitle'>Subtitle</h5>
+              <h2 class='card__title'>Title</h2> -->
+              <p class='card__extra'><span style="color: black;">NAME </span>: The driver's full name, 
+                useful for display and
+                 identification.
+              acts as additonal information</p>
+            </div>
+          </div>
+          <div class='col'>
+            <div class='card' id='tour-card'>
+              <!-- <i class='fas fa-home'></i> -->
+              <!-- <h5 class='card__subtitle'>Subtitle</h5>
+              <h2 class='card__title'>Title</h2> -->
+              <p class='card__extra'><span style="color: black;">STATUS </span>: true:
+                 Indicates the driver's
+                 bus is available and ready for
+                  passengers,converse 
+                 false : not available</p>
+            </div>
+          </div>
+        </div>
+        <div class='table-card'  >
+           <h2 style="text-align: center;">  BUS - DRIVER - LOG </h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <td class="first-row" id='tour-table' >ID</td>
+                <td class="first-row">NAME</td>
+                <td class="first-row">BUS NO</td>
+                <td class="first-row">BOARDING</td>
+                <td class="first-row">STATUS</td>
+              </tr>
+            </thead>
+            
+            <tbody class="js-table-body">
+            <!--GENERATED THORGH JS ACCUMULATAR PATATERN -->
+            </tbody>
+            </table>  
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section id="js-section-feedback">
+  <div class="js-feedback-container">
+    
+    
+    <!-- <div class="js-feedback-left">
+      <div class="feedback-div-h-left">
+
+        <h3 class="feeback-h-left">Let us know how can we improve </h3>
+      </div>
+      <div style="display: flexbox; align-items: center; justify-content: center;" class="feedback-div-inp-left">
+        <form action="">
+          <fieldset class="feedback-fieldset-left">
+            <legend>
+             Anonymously 
+            </legend>
+            <input type="text" placeholder="Add your suggestions " name="" class="feedback-inp-left">
+            <button class="done-btn js-done-btn" type="button" >done</button>
+          </fieldset>
+          
+        </form>
+
+      </div>
+
+    </div> 
+    
+     <div class="js-feedback-right js-feedback-right-hide" >
+      <div class="feedback-div-right">
+        <div class="feedback-matter-right">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" 
+             type="module">
+            </script>
+          <dotlottie-player src="https://lottie.host/760017e3-8db2-408f-aeb6-18e048751173/qxqLtnymKZ.lottie"
+                    background="transparent" speed="1" style="width: 300px; height: 70px" 
+                    loop autoplay>
+          </dotlottie-player>
+          
+          <h5> The feedback help us improve,appriciate the time
+             you took to send us the feedback! </h5>
+        </div>
+      </div>
+
+    </div>  -->
+
+
+  </div>
+</section>
+
+
+
+<section id="js-section-footer">
+  <div class="js-div-footer-below" id="js-div-footer-below"></div>
+</section>
+
+
+
+<script  src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script  src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+<script  type="module" src="../scripts/dirver.js"></script>
+
+</body>
+
+
+  
+
+</html>
